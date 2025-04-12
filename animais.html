@@ -1,0 +1,59 @@
+<section id="cadastro">
+    <h2 style="text-align:center;">Cadastro de Animais</h2>
+    <form id="formCadastroAnimal">
+      <input type="text" id="nome" placeholder="Nome do animal" required />
+      <select id="especie" required>
+        <option value="">Selecione a espécie</option>
+        <option value="Cachorro">Cachorro</option>
+        <option value="Gato">Gato</option>
+        <option value="Outro">Outro</option>
+      </select>
+      <input type="text" id="raca" placeholder="Raça" required />
+      <input type="date" id="nascimento" required />
+      <button type="submit">Cadastrar Animal</button>
+    </form>
+  
+    <h3 style="margin-top:40px;">🐾 Lista de Pets Cadastrados</h3>
+    <ul id="listaPets" style="margin-top:20px; list-style: none; padding: 0;"></ul>
+  </section>
+  
+  <script>
+    const form = document.getElementById('formCadastroAnimal');
+    const lista = document.getElementById('listaPets');
+    const pets = [];
+  
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      const nome = document.getElementById('nome').value;
+      const especie = document.getElementById('especie').value;
+      const raca = document.getElementById('raca').value;
+      const nascimento = document.getElementById('nascimento').value;
+  
+      const pet = { nome, especie, raca, nascimento };
+      pets.push(pet);
+  
+      renderListaPets();
+  
+      form.reset();
+    });
+  
+    function renderListaPets() {
+      lista.innerHTML = '';
+  
+      pets.forEach((pet, index) => {
+        const item = document.createElement('li');
+        item.style.padding = '10px';
+        item.style.borderBottom = '1px solid #ccc';
+  
+        item.innerHTML = `
+          <strong>${pet.nome}</strong> (${pet.especie})<br/>
+          Raça: ${pet.raca}<br/>
+          Nascimento: ${new Date(pet.nascimento).toLocaleDateString()}
+        `;
+  
+        lista.appendChild(item);
+      });
+    }
+  </script>
+  

@@ -8,22 +8,9 @@ app.use(express.static('static'))
 app.get('/', (req, res) => {
     res.sendFile(`${basePath}/index.html`)
 })
-app.get('/cadastro', (req,res) => {
-    res.sendFile(`${basePath}/cadastro.html`)
+app.get('/livros', (req, res) => {
+    res.sendFile(`${basePath}/livros.html`)
 })
-
-app.post('/cadastro', (req,res) => {
-    res.send('Animal Cadastrado')
-})
-
-app.get('/sobre/:id/', (req, res) => {
-    console.log(res)
-    res.send(req.params.id)
-})
-
-
-
-
 
 
 // Criar o servidor web

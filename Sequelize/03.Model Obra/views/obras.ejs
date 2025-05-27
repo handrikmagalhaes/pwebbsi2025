@@ -10,7 +10,6 @@
                     <thead>
                         <th>Título</th>
                         <th>Sub-Título</th>
-                        <th>Autor</th>
                         <th>Gênero</th>
                         <th>Ações</th>
                     </thead>
@@ -19,7 +18,6 @@
                             <tr>
                                 <td><%= obra.titulo %></td>
                                 <td><%= obra.subtitulo %></td>
-                                <td><%= obra.autor %></td>
                                 <td><%= obra.Genero.genero %></td>
                                 <td><a class="btn btn-primary" id="btnAlterar" href="/obras/alterar/<%= obra.id %>">Alterar</a><a class="btn btn-danger" id="btnExcluir" href="/obras/excluir/<%= obra.id %>">Excluir</a></td>
                             </tr> 

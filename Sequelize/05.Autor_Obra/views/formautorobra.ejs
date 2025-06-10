@@ -15,21 +15,23 @@
                                 <th>Ações</th>
                             </thead>
                             <tbody>
-                                <% for (var i =0; i < obras.Autors.length; i++) { %>
+                                <% obras.Autors.forEach(function(autores){ %>
                                     <tr>
-                                        <td><% if (obras.Autors[i]) { %> <%= obras.Autors[i].sobrenome %>, <%= obras.Autors[i].nome %> <% } %></td>
-                                        <td><% if (obras.Autors[i]) { %><a class="btn btn-danger" id="btnExcluir" href="/autores/excluir/<%= obras.Autors[i].id%>">Excluir</a><% } %></td>
-                                    </tr> 
-                                <% } %>
+                                        <td><%= autores.sobrenome %>, <%= autores.nome %></td>
+                                        <td><a type="button" class="btn btn-danger" href="/autorobra/excluir/<%= autores.id %>/<%= obras.id %>">Excluir</a></td>
+                                    </tr>
+
+                                <% }) %>
                             </tbody>
                         </table>
                         <input type="hidden" value="<%= obras.id %>" name="obra">
                             <label for="autores" class="form-label">Autores</label>
                             <select class="form-control" name="autor" id="autor">
                             <option value="" selected name="genero">---------</option>
-                                <% autores.forEach(function(autor){ %>
-                                <option value="<%= autor.id %>"><%= autor.sobrenome %>,<%= autor.nome %></option>
-                                <% }) %>
+                            <% autores.forEach(function(autor){ %>
+                                <option value="<%= autor.id %>"><%= autor.sobrenome %>, <%= autor.nome %> </option>
+
+                            <% }) %>
                             </select>
                         <div class="card card-footer">
                             <div class="btn-group col-4">

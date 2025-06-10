@@ -174,7 +174,11 @@ app.get('/obras/excluir/:id', (req, res) => {
 
 //Pages AUTORES
 app.get('/autores', (req, res) => {
-    Autor.findAll()
+    Autor.findAll({
+        order: [
+            ['nome', 'ASC']
+        ]
+    })
     .then((autores) => {
         res.render('autores', {autores})
     })
@@ -246,13 +250,13 @@ app.get('/autores/excluir/:id', (req, res) => {
     })
 })
 
-//Model AUTOROBRA
-app.get('/autorobra/:id', async (req,res) => {
+// Pages AutorObra
+app.get('/autorobra/:id', (req, res) => {
     const id = req.params.id
-    const dados = {}
-    //Recupera todos os Autores
+
+    //Recuperar os dados de todos os autores
     Autor.findAll({
-        raw: true,
+        raw:true,
     })
     .then((autores) => {
         Obra.findOne({
@@ -262,30 +266,43 @@ app.get('/autorobra/:id', async (req,res) => {
             include: Autor,
         })
         .then(obras => {
-            //res.send({autores,obras})
+            console.log(obras)
             res.render('formautorobra', {autores, obras})
-
         })
         .catch((err) => {
-            res.status(500).send(`Erro ao consultar obras: ${err}`)
+            res.status(500).send(`Erro ao selecionar obra: ${err}`)
         })
-    
     })
-    .catch((err) => {
-        res.status(500).send(`Erro ao consulra autores: ${err}`)
+    .catch(err => {
+        res.status(500).send(`Erro ao selecionar Autores: ${err}`)
     })
-    //Recupera os autores da Obra
-
 })
 
-app.post('/autorobra/inserir', async (req,res) => {
-    const {obra, autor } = req.body
+app.post('/autorobra/inserir', (req,res) => {
+    const {obra,autor} = req.body
     Obra.findByPk(obra)
-    .then(obra => {
-        obra.addAutors([autor])
-        res.redirect(`/autorobra/${obra.dataValues.id}`)
+    .then(data => {
+        data.addAutors([autor])
+        res.redirect(`/autorobra/${obra}`)
+    })
+    .catch(err => {
+        res.status(500).send(`Erro ao associar autor: ${err}`)
     })
 })
+
+app.get('/autorobra/excluir/:idautor/:idobra', async (req,res) => {
+    const idobra = req.params.idobra
+    const idautor = req.params.idautor
+    try {
+        const autor = await Autor.findByPk(idautor)
+        const obra = await Obra.findByPk(idobra)
+        await obra.removeAutor(autor)
+        res.redirect(`/autorobra/${idobra}`)
+    } catch {
+        res.status(500).send(`Erro ao excluir: ${err}`)
+    }
+})
+
 //Sincronização de models
 conn.sync()
 .then(

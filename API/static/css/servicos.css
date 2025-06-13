@@ -1,0 +1,738 @@
+/*     ###################################
+       #      Configuracoes Iniciais     #
+       ###################################    */
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+body {
+    font-family: 'Open Sans', sans-serif;;
+    background-color: #FFF;
+    font-size: 16px;
+    color: #000;
+    }
+
+body a, a:hover{
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.8rem !important;
+    font-weight: bold !important;
+    line-height: 2.5rem !important;
+    text-align: center !important;
+}
+
+h2 {
+    font-size: 1.6rem !important;
+    font-weight: lighter !important;
+    line-height: 2.2rem !important;
+    text-align: center !important;
+    color: #545454;
+}
+
+h3{
+    font-size: 1.2rem !important;
+    color: #545454;
+    font-weight: lighter !important;
+    line-height: 2.2rem !important;
+}
+
+.container {
+    transition: all 0.2s ease-in-out !important;
+}
+
+.container-fluid {
+    transition: all 0.2s ease-in-out !important;
+}
+
+#titulo-sistema {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    letter-spacing: 2px;
+}
+
+
+/*     ###################################
+       #      BREADCRUMB E BUSCA         #
+       ###################################    */
+
+.transparente-50 {
+    opacity: 0.5;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: none;
+}
+
+#container-breadcrumb {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+#container-breadcrumb a {
+    transition: all 0.2s ease-in-out !important;
+    color: #000;
+}
+
+#container-breadcrumb a:hover {
+    color: #2F9E41;
+}
+
+.input-group {
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 7px !important;
+    border: 1px solid transparent  !important;
+    background-color: #FFF  !important;
+    height: 40px !important;
+}
+
+#container-breadcrumb input::placeholder{
+    color: #808080 !important;
+}
+
+.input-group:hover, .input-group:focus {
+    background-color: #FFF  !important;
+    border: 1px solid #C0C0C0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+#busca-icon-breadcrumb{
+    height: 40px;
+    border: 0px transparent;
+    font-size: 14px;
+    font-weight: lighter;
+    background-color: transparent;
+    color: #808080;
+}
+
+#busca-nav-breadcrumb{
+    border: 0px transparent;
+    background-color: transparent;
+    height: 40px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #000;
+}
+
+#busca-nav{
+    width: 100% !important;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 7px !important;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+#head-conteudo input::placeholder{
+    color: #545454 !important;
+}
+
+.busca-nav-branco {
+    background-color: #FFF;
+    color: #000;
+}
+
+.busca-nav-branco:hover, .busca-nav-branco:focus {
+    background-color: #FFF;
+    border: 1px solid #C0C0C0;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.busca-nav-cinza {
+    background-color: #E9E9E9;
+    color: #000;
+    border: 1px solid transparent !important;
+}
+
+.busca-nav-cinza:hover, .busca-nav-cinza:focus {
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #C0C0C0 !important;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*     ###################################
+       #             NavBar              #
+       ###################################    */
+       
+    #logomarca {
+        width: 150px;
+        height: 42px;
+        border: 0px !important;
+        background: url('/static/images/logo-light.svg') no-repeat;
+        background-size: contain;
+    }
+
+    .navbar {
+        height: 70px;
+        background: #FFF !important;
+        color: #000 !important;
+        border: none;
+        border-radius: 0;
+    }
+
+    #topo {
+        background-color: #FFF;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2) !important;
+        z-index: 1;
+    }
+
+    #acessibilidade {
+        font-size: 11px;
+        height: 40px;
+        background-color: #FFF;
+        color: #535353;
+        z-index: 2 !important;
+    }
+
+    #a-contraste {
+        transition: all 0.2s ease-in-out !important;
+        color: #000;
+    }
+
+    #a-contraste:hover, #a-contraste:focus {
+        background-color: #E0E0E0;
+        border-radius: 4px !important;
+
+    }
+
+    .border-bottom-dashed {
+        border-bottom: 1px dashed #D0D0D0;
+    }
+
+    .acess {
+        transition: all 0.2s ease-in-out !important;
+        font-size: 11px;
+        letter-spacing: normal;
+        color: #535353 !important;
+        border-radius: 4px !important;
+    }
+
+    .acess:hover, .acess:active {
+        color: #000 !important;
+        background-color: #E0E0E0;
+    }
+
+    .acess:focus {
+        background-color: transparent;
+    }
+
+    .nav-item {
+        color: #000 !important;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-left: 10px;
+    }
+
+    .nav-item a{
+        color: #000 !important;
+    }
+
+    .nav-item a:hover {
+        font-weight: bold;
+    }
+
+/*     ###################################
+       #          Menu Lateral           #
+       ###################################    */
+
+       #nav-menu-lateral {
+        background-color: #FFF;
+        color: #000;
+    }
+
+    .secao-menu {
+        border-bottom: 1px dashed #D0D0D0;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #535353;
+        font-weight: bolder;
+        letter-spacing: 0.2em;
+    }
+    
+    #nav-menu-lateral ul li a {
+        transition: all 0.2s ease-in-out !important;
+        padding: 10px; /* Nao alterar */
+        margin-right: 10px; /* Nao alterar */
+        font-size: 14px;
+        display: block;
+        color: #535353;
+    }
+
+    #nav-menu-lateral .ativo {
+        color: #FFF;
+        font-weight: bold;
+        background: #2F9E41;
+        border-radius: 7px !important;
+    }
+
+    #nav-menu-lateral ul li a.ativo:hover {
+        color: #FFF;
+        font-weight: bold;
+        background: #2F9E41;
+        border-radius: 7px !important;
+    }
+    
+    #nav-menu-lateral ul li a:hover {
+        color: #000;
+        background: #E0E0E0;
+        border-radius: 7px !important;
+    }
+    
+    .dropdown-icon {
+        float: right;
+    }
+    
+/*     ###################################
+       #        Animacao Fade-In         #
+       ###################################    */
+
+        .fade-in-1 {
+        animation-name: animafadein;
+        animation-duration: 0.5s;
+    }
+
+    
+    @keyframes animafadein {
+        from {opacity:0;}
+        to {opacity:1;}
+    }
+
+    @keyframes slide {
+        from {transform: translateY(10px)}
+        to {transform: translateY(0px)}
+    }
+    
+/*     ###################################
+       #         Menu DropDown           #
+       ###################################    */
+
+       .dropdown-menu {
+        font-size: 15px;
+        animation-name: animafadein, slide;
+        animation-duration: 0.5s;
+        border-radius: 7px;
+    }
+
+        .dropdown-item-topo {
+            font-size: 14px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+        }
+    
+        .dropdown-item {
+        text-transform: none;
+        color: #000 !important;
+        padding: 8px 20px; /* Nao alterar */
+    }
+
+        .dropdown-item:hover {
+        background-color: #E0E0E0;
+     }
+
+    .botao-filtro,
+    .botao-facebook,
+    .botao-twitter,
+    .botao-whatsapp {
+        border-radius: 7px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-color: transparent;
+        height: 40px;
+    }
+
+    .botao-facebook,
+    .botao-twitter,
+    .botao-whatsapp {
+        font-size: 14px;
+        color: #FFF !important;
+        transition: all 0.2s ease-in-out !important;
+    }
+
+    .botao-filtro {
+        font-size: 12px;
+        background-color: #E9E9E9;
+        color: #000;
+    }
+
+    .botao-facebook {
+        background-color: #3A5799 !important;
+    }
+
+    .botao-whatsapp {
+        background-color: #43C654 !important;
+    }
+
+    .botao-twitter {
+        background-color: #00ABF0 !important;
+    }
+
+    .botao-facebook:hover,
+    .botao-twitter:hover,
+    .botao-whatsapp:hover {
+        border-color: transparent;
+        transition: all 0.2s ease-in-out !important;
+        transform: translateY(-2px)
+    }
+
+    .botao-filtro:focus,
+    .botao-filtro:hover {
+        background-color: #FFF;
+        border: 1px solid #C0C0C0;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .botao-filtro a{
+        color: #000;
+        text-decoration: none;
+    }
+
+    .botao-filtro:focus,
+    .botao-filtro:hover a{
+        color: #000;
+    }
+
+
+/*     ###################################
+       #             Conteudo            #
+       ###################################    */
+
+       .alinha-vertical {
+        display: flex;
+        align-items: center;
+    }
+
+    .table .thead-light th {
+        background-color: #E9E9E9 !important;
+    }
+
+    .table td.fit, 
+    .table th.fit {
+        white-space: nowrap;
+        width: 1%;
+        text-align: center; 
+    }
+
+    #head-conteudo {
+        margin-top: 1px; /*alinhamento com a seção menu*/
+    }
+    
+    #head-edital {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #535353;
+        letter-spacing: 1px;
+    }
+
+    #titulo-edital {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0px;
+    }
+
+    #edital a {
+        transition: all 0.2s ease-in-out !important;
+        color: #000;
+    }
+
+    #edital a:hover {
+        color: #2F9E41;
+    }
+
+    #compartilhe,
+    #footer-edital {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #535353;
+        letter-spacing: 1px;
+    }
+
+    hr {
+        border-top: 1px dashed #D0D0D0;
+    }
+
+    #categorias-btn{
+        display: none !important;
+    }
+
+    .exibindo {
+        letter-spacing: 0.2em;
+        font-weight: bold;
+    }
+
+    #titulo-total-listagem{
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #535353;
+        letter-spacing: 1px;
+    }
+
+/*     ###################################
+       #             PAGINACAO           #
+       ###################################    */
+
+       .page-link {
+            transition: all 0.2s ease-in-out !important;
+            border-radius: 7px !important;
+            color: #000;
+            margin: 0px 3px;
+            padding: 12px; /* Nao alterar */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+            background-color: #FFF;
+            border-color: #D0D0D0;
+       }
+
+       .page-link:hover {
+            color: black !important;
+       }
+
+       .page-item.active .page-link,
+       .page-item.active .page-link:hover {
+            font-weight: bold;
+            color: #FFF !important;
+            background-color: #2F9E41 !important;
+            border-color: #2F9E41 !important;
+            box-shadow: 0;
+       }
+
+
+/*     ###################################
+       #             RODAPE              #
+       ###################################    */
+
+    #logomarca-rodape-vertical {
+        height: 100px;
+    }
+
+    #logomarca-rodape-horizontal {
+        width: 180px;
+    }
+
+    #div-background-rodape ul li{
+        color: white;
+        display: block;
+    }
+
+    #div-background-rodape ul li a{
+        transition: all 0.2s ease-in-out !important;
+        color: #e9fcec;
+        display: block;
+        border-radius: 7px;
+    }
+
+    .rs{
+        display: inline !important;
+    }
+    .rs:hover {
+        color: white !important;
+        background-color: transparent !important;
+    }
+
+    #div-background-rodape ul li a:hover {
+        color: #FFF;
+        background-color: #185522;
+    }
+
+    .head-lista-rodape {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #FFF !important;
+        font-weight: bold;
+    }
+
+    .social-rodape {
+        font-size: 20px;
+        letter-spacing: 10px;
+    }
+
+       .rodape {
+        font-size: 14px;
+    }
+
+       .rodape-assinatura {
+        font-size: 14px;
+        letter-spacing: 0.2em;
+        margin-bottom: 50px;
+    }
+
+
+    #div-background-rodape{
+        color: #FFF;
+        background: radial-gradient(50% 150% at 50% 150%, #50ac5f 0%, #1f742d 100%), #1f742d;
+    }
+
+    #div-rodape-assinatura{
+        color: #bbf1c4;
+        background: #185522;
+    }
+
+
+
+/*     ###################################
+       #       Tamanho min 992px         #
+       ###################################    */
+
+       @media (min-width: 992px) {
+
+        #menu-lateral {
+            min-width: 285px;
+            max-width: 285px;
+        }
+
+        #div-background{
+            height: 100px;
+            background: radial-gradient(50% 150% at 50% 150%, #bbf1c4 0%, #2F9E41 100%), #2F9E41;
+        }
+
+        #div-background-breadcrumb{
+            min-height: 70px;
+            background-color: #E9E9E9;
+            margin-bottom: 15px;
+        }
+
+        .bg-ondas-verdes{
+            background: url('/static/images/fundo_head.png') no-repeat;
+            background-size: contain;
+            background-position: left;
+        }
+
+    }
+
+
+/*     ###################################
+       #          Tamanho max 992px          #
+       ###################################    */
+
+    @media (max-width: 992px) {
+
+        h1 {
+            font-size: 1.2rem !important;
+            font-weight: bold !important;
+            line-height: 2rem !important;
+            text-align: center !important;
+        }
+        
+        h2 {
+            font-size: 1.2rem !important;
+            font-weight: lighter !important;
+            line-height: 1.8rem !important;
+            text-align: center !important;
+            color: #545454;
+        }
+        
+        h3{
+            font-size: 1rem !important;
+            color: #545454;
+            font-weight: lighter !important;
+            line-height: 1.8rem !important;
+        }
+
+        .contraste div#navbarNav {
+            background: #000;
+        }
+
+        #busca-nav {
+            height: 40px;
+        }
+
+        body {
+            background-color: #E9E9E9;
+        }
+
+        #categorias-btn {
+            margin-right: 10px;
+            margin-left: -10px;
+            display: block !important;
+        }
+
+        #menu-lateral {
+            min-width: 0px;
+            max-width: 0px;
+            display: none;
+        }
+
+        #edital {
+            margin: 0px 2px;
+            border-radius: 7px;
+            background-color: #FFF;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        #head-conteudo {
+            margin: 0px 2px;
+            border-radius: 7px;
+            background-color: #FFF;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        #titulo-edital {
+            font-size: 18px;
+            letter-spacing: normal;
+        }
+
+        #div-background{
+            height: 100px;
+            background: url('/static/images/fundo_head.png') no-repeat, radial-gradient(50% 150% at 50% 150%, #bbf1c4 0%, #2F9E41 100%), #2F9E41;
+            background-size: cover;
+            background-position: center;
+        }
+        #div-background-breadcrumb{
+            min-height: 70px;
+            background-color: #E9E9E9;
+            margin-bottom: 0px;
+        }
+        
+        #container-breadcrumb{
+
+            line-height: 25px;
+        }       
+
+        .rodape {
+            letter-spacing: normal;
+        }
+    
+           .rodape-assinatura {
+            font-size: 11px;
+            letter-spacing: normal;
+        }
+
+    }
+
+/*     ###################################
+       #          Tamanho 767px          #
+       ###################################    */
+
+    @media (max-width: 767px) {
+
+        h1, h2 {
+            text-align: left !important;
+        }
+        
+        #titulo-edital {
+            font-size: 16px;
+            letter-spacing: normal;
+        }
+
+        #icon-filtro{
+            font-size: 12px;
+        }
+
+        #id-dropdown-menu {
+            width: 300px;
+        }
+
+        #id-dropdown-menu a{
+            width: 300px;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+    }

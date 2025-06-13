@@ -1,0 +1,559 @@
+/*     ###################################
+       #      Configuracoes Iniciais     #
+       ###################################    */
+
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+body {
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 15px;
+    }
+
+h1 {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.alinha-vertical {
+    display: flex;
+    align-items: center;
+}
+
+h3 {
+    font-weight: bolder;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+a {
+    color: #00471e;
+    transition: all 0.5s;
+}
+
+a:hover, a:focus {
+    color: #00943e;
+}
+
+#content .container {
+    max-width: 95%;
+}
+
+#container-table {
+    max-width: 100% !important;
+}
+
+/*     ###################################
+       #        Animacaoo Fade-In         #
+       ###################################    */
+
+.fade-in {
+    animation-name: animafadein;
+    animation-duration: 1s;
+}
+
+@keyframes animafadein {
+    from {opacity:0}
+    to {opacity:1}
+}
+
+@keyframes slide {
+    from {transform: translateY(10px)}
+    to {transform: translateY(0px)}
+}
+
+.transition-width { 
+    transition: width 4s ease-out; 
+    webkit-transition: width 4s ease-out; 
+}
+
+.fade-in-slide {
+    animation-name: animafadein, slide;
+}
+
+.tempo-anima-1 { animation-duration: 0.5s; }
+.tempo-anima-2 { animation-duration: 0.8s; }
+.tempo-anima-3 { animation-duration: 1.1s; }
+.tempo-anima-4 { animation-duration: 1.4s; }
+.tempo-anima-5 { animation-duration: 1.8s; }
+.tempo-anima-6 { animation-duration: 2.2s; }
+
+/*     ###################################
+       #         Menu DropDown           #
+       ###################################    */
+
+.dropdown-menu {
+    font-size: 15px;
+    animation-name: animafadein, slide;
+    animation-duration: 0.5s;
+    border-radius: 7px;
+}
+
+.dropdown-item {
+    font-size: 15px;
+}
+
+/*     ###################################
+       #           BreadCrumb            #
+       ###################################    */
+
+.breadcrumb {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+
+.breadcrumb a {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+
+.breadcrumb a:hover {
+    border-bottom: 1px dashed;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/*     ###################################
+       #             NavBar              #
+       ###################################    */
+    
+    #logomarca {
+        width: 134px;
+        height: 42px;
+    }
+
+    #logomarca-rodape {
+        width: 134px;
+        height: 42px;
+    }
+
+    #busca-nav {
+        max-width: 590px;
+        width: 100%;
+        height: 40px;
+        border: 0px;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    #input-busca-nav {
+        height: 40px;
+        border: 0px;
+        font-size: 14px;
+        font-weight: lighter;
+        letter-spacing: 0.1em;
+        transition: all 0.3s;
+    }
+
+    .modal-body input,
+    .card-body input {
+        height: 40px;
+        border: 0px;
+        border-radius: 5px;
+        transition: all 0.3s;
+        font-size: 14px;
+        font-weight: lighter;
+        letter-spacing: 0.1em;
+    }
+
+    #busca-nav:focus, #busca-nav:hover, .card-body input {
+        transition: all 0.3s;
+    }
+
+    #busca-nav-mobile{
+        width: 590px;
+        height: 40px;
+        border: 0px;
+        border-radius: 5px;
+        transition: all 0.3s;
+        font-size: 14px;
+        font-weight: lighter;
+        letter-spacing: 0.1em;
+    }
+
+    #busca-nav-mobile:focus {
+        transition: all 0.3s;
+    }
+    #busca-nav-mobile:hover {
+        transition: all 0.3s;
+    }
+
+    .btn-navbar-topo {
+        height: 40px;
+    }
+
+    .navbar {
+        height: 70px;
+        border: none;
+        border-radius: 0;
+    }
+
+    .navbar-btn {
+        box-shadow: none;
+        outline: none !important;
+        border: none;
+    }
+
+    .navbar-brand {
+        vertical-align: middle;
+    }
+
+/*     ###################################
+       #       Configuracoes Admin       #
+       ###################################    */
+
+#icone-usuario {
+    font-size: 6rem;
+}
+
+.custom-file-input ~ .custom-file-label::after {
+    content: "Procurar...";
+}
+
+/*     ###################################
+       #              MENU               #
+       ###################################    */
+
+#menu {
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.3s;
+    z-index: 10px;
+    overflow-x: hidden;
+    transition: all 0.3s;
+}
+
+.secao-menu {
+    font-size: 11px;
+    font-weight: lighter;
+    letter-spacing: 0.2em;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    padding: 10px; /* Nao alterar */
+    margin: 0px 10px;  /* Nao alterar */
+    font-size: 15px;
+    display: block;
+    width: 200px;
+}
+
+#menu ul li.focus>a,
+a[aria-expanded="true"] {
+    font-weight: bold;
+}
+
+#menu .dropdown-icon {
+    transition-duration: 0.4s;
+    transition-property: transform;
+    background-size: contain !important;
+    float: right;
+    width: 15px;
+    height: 15px;
+}
+
+#menu ul li.focus>a, 
+a[aria-expanded="true"] .dropdown-icon {
+    transform: rotate(90deg) translateY(0px) translateX(5px);
+}
+
+#menu a[data-toggle="collapse"] {
+    position: relative;
+}
+
+#menu ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 20px !important; /* Nao alterar */
+}
+
+.a-fecha-menu-busca {
+    cursor: default;
+}
+
+
+/*     ###################################
+       #        Botao Fechar Menu        #
+       ###################################    */
+
+#btnMenu{
+    transition: all 0.5s;
+    left: 0;
+}
+
+.fecha-menu-busca {
+    width: 100%;
+    height: 100%;
+    margin: 0em;  /* Nao alterar */
+    left: 0em;
+    top: 0em;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 20;
+    display: none;
+    background-color: black;
+}
+
+/*     ###################################
+       #       Conteudo Principal        #
+       ###################################    */
+
+
+.tr-edital {
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out !important;
+}
+
+#content {
+    animation: fadein 2s;
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.card-link, .card-link:hover, .card-link:focus {
+    text-decoration: none;
+}
+
+hr {
+    margin-bottom: 2.25rem; /* Nao alterar */
+    margin-top: 1.75rem; /* Nao alterar */
+}
+
+.rodape {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+}
+
+.transicao-suave {
+        transition: all 0.2s ease-in-out !important;
+}
+
+.cartao-slide {
+    transition: all 0.2s ease-in-out !important;
+}
+
+.zoom {
+    transition: all 0.5s ease-in-out !important;
+}
+
+.cartao-slide:hover{
+    transform: translateY(-5px);
+}
+
+.scrolling-wrapper{
+	overflow-x: auto;
+}
+
+/*     #####################################
+       #             Paginacao             #
+       #####################################    */
+
+.td-items {
+    height: 60px;
+    vertical-align: middle !important;
+}
+
+.page-link {
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 7px !important;
+    margin: 0px 3px; /* Nao alterar */
+    padding: 12px; /* Nao alterar */
+}
+
+.page-item.active .page-link {
+    font-weight: bold;
+    box-shadow: 0;
+}
+
+/*     #####################################
+       #              Modal                #
+       #####################################    */
+
+.modal-content {
+    border-radius: 7px !important;
+}
+
+/*     #####################################
+       # Divs titulo da pg e botao lateral #
+       #####################################    */
+
+.card-andamento {
+    border: 0px;
+    border-radius: 7px;
+    margin-bottom: 25px; /* Nao alterar */
+}
+
+.card {
+    border-radius: 7px;
+    margin-bottom: 25px;  /* Nao alterar */
+}
+
+.card-icon {
+    font-size: 40px;
+}
+
+.card-header,
+.modal-header {
+    border-radius: 7px 7px 0px 0px !important;
+    font-weight: bold;
+    font-size: 16px;
+    height: 70px;
+}
+
+.card-footer {
+    border-radius: 0px 0px 7px 7px !important;
+    font-size: 16px;
+}
+
+.font-table {
+    font-size: 14px !important;
+}
+
+#tabela-editais-publicados td,
+#tabela-editais-publicados th{
+    padding: 15px; /* Nao alterar */
+}
+
+/*     ###################################
+       #          Media Queries          #
+       ###################################    */
+
+
+/*     ###################################
+       #      Tamanho minimo: 1000px     #
+       ###################################    */
+
+
+@media (min-width: 1000px) {
+
+    #btnMenu {
+        display: none;
+    }
+    #fecha-menu {
+        display: none !important;
+    }
+
+}
+
+
+/*     ###################################
+       #      Tamanho maximo: 999px      #
+       ###################################    */
+
+@media (max-width: 999px) {
+
+    #menu {
+        transition: all 0.3s;
+        position: fixed;
+        z-index: 999;
+        height: 100%;
+        margin-left: -250px;  /* Nao alterar */
+    }
+    #menu.abrir-menu {
+        margin-left: 0;  /* Nao alterar */
+    }
+
+}
+
+/*     ###################################
+       #      Tamanho maximo: 871px      #
+       ###################################    */
+
+       @media (max-width: 871px) {
+
+        #menu {
+            overflow-y: hidden;
+        }
+    
+    }
+
+/*     ###################################
+       #      Tamanho maximo: 870px      #
+       ###################################    */
+
+       @media (max-width: 870px) {
+
+        #menu {
+            overflow-y: scroll;
+        }
+    
+    }
+
+/*     ###################################
+       #      Tamanho minimo: 576px      #
+       ###################################    */
+
+       @media (min-width: 576px) {
+       
+        #busca-mobile {
+            width: 100%;
+            transition: all 0.3s;
+            position: fixed;
+            z-index: 888;
+            height: 70px;
+            margin-top: -70px; /* Nao alterar */
+        }
+
+        #busca-mobile.active {
+            margin-top: 70px; /* Nao alterar */
+        }
+
+    }
+
+/*     ###################################
+       #      Tamanho maximo: 575px     #
+       ###################################    */
+
+       @media (max-width: 575px) {
+
+        #busca-nav-mobile{
+            width: 300px;
+        }
+
+        .cartao-slide:hover{
+            transform: translateY(0px);
+        }
+
+        #busca-mobile {
+            width: 100%;
+            transition: all 0.3s;
+            position: fixed;
+            z-index: 888;
+            height: 70px;
+            margin-top: -70px; /* Nao alterar */
+        }
+
+        #busca-mobile.active {
+            margin-top: 70px; /* Nao alterar */
+        }
+
+        #logomarca {
+            width: 100px;
+            height: 31px;
+        }
+
+        .rodape {
+            font-size: 11px;
+            letter-spacing: 0;
+        }
+    
+    }
+
+/*     ###################################
+       #      Tamanho maximo: 330px     #
+       ###################################    */
+
+       @media (max-width: 330px) {
+
+        #logomarca{
+            display: none;
+        }
+    }

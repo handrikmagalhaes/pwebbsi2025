@@ -1,0 +1,174 @@
+/*     ###################################
+       #        Acessibilidade           #
+       ###################################    */
+
+       .contraste,
+       .contraste body,
+       .contraste div#conteudo div,
+       .contraste div#div-background,
+       .contraste .dropdown-menu,
+       .contraste nav,
+       .contraste nav#topo,
+       .contraste header,
+       .contraste footer,
+       .contraste section,
+       .contraste main,
+       .contraste aside,
+       .contraste article {
+           background-color: #000 !important;
+           color: #FFF;
+       }
+       
+       .contraste .badge-light {
+           color: #FFF !important;
+           background-color: #000 !important;
+       }
+       
+       .contraste input#busca-nav-breadcrumb {
+           border: 1px solid white !important;
+           background-color: #000 !important;
+           font-weight: bold;
+           color: #FFF;
+       }
+       
+       .contraste #busca-icon-breadcrumb {
+           background-color: #FFF !important;
+       }
+       
+       .contraste div {
+           background-color: transparent;
+       }
+       
+       .contraste .bg-ondas-verdes {
+           background: none;
+       }
+       
+       .contraste .bi-search {
+           color: #000 !important;
+       }
+       
+       .contraste #container-breadcrumb input::placeholder,
+       .contraste #head-conteudo input::placeholder{
+           color: #FFF !important;
+           font-weight: bold;
+       }
+       
+       .contraste h1,
+       .contraste h2,
+       .contraste h3,
+       .contraste h4,
+       .contraste h5,
+       .contraste h6,
+       .contraste p,
+       .contraste label,
+       .contraste strong,
+       .contraste span,
+       .contraste em,
+       .contraste cite,
+       .contraste q,
+       .contraste b,
+       .contraste nav#acessibilidade,
+       .contraste div#head-edital,
+       .contraste div#footer-edital,
+       .contraste nav#nav-breadcrumb ol li,
+       .contraste .secao-menu,
+       .contraste u {
+           color: white !important;
+       }
+       
+       .contraste button span,
+       .contraste a,
+       .contraste a.nav-link,
+       .contraste div#titulo-edital {
+           color: yellow !important;
+       }
+       
+       .contraste button:hover span,
+       .contraste a:hover,
+       .contraste a.nav-link:hover,
+       .contraste div#titulo-edital:hover {
+           text-decoration: underline !important;
+       }
+       
+       .contraste div#div-background-breadcrumb,
+       .contraste div#div-rodape-assinatura,
+       .contraste div#container-breadcrumb,
+       .contraste nav#nav-breadcrumb,
+       .contraste nav#topo,
+       .contraste nav#acessibilidade {
+           background-color: transparent !important;
+       }
+       
+       .contraste div#div-background-breadcrumb,
+       .contraste div#div-background-rodape,
+       .contraste nav#topo {
+           border-bottom: 1px solid white !important;
+       }
+       
+       .contraste div#div-background-rodape,
+       .contraste div#div-background-breadcrumb {
+           border-top: 1px solid white !important;
+       }
+       
+       .contraste div#div-background-rodape ul li a:hover{
+           background-color: #333;
+           border-radius: 7px;
+       }
+       
+       .contraste div#logomarca {
+           background: url('/static/images/LOGO_IFAL_BRANCO.svg') no-repeat !important;
+           background-size: contain !important;
+       }
+       
+       .contraste .acess:hover, .acess:active {
+           color: yellow !important;
+           background-color: #333 !important;
+       }
+       
+       .contraste .acess:focus {
+           background-color: transparent !important;
+       }
+       
+       .contraste .dropdown-menu {
+           border: 1px solid white !important;
+       }
+       
+       .contraste div#menu-lateral nav#nav-menu-lateral ul#menu-opcoes li a.ativo,
+       .contraste div#menu-lateral nav#nav-menu-lateral ul#menu-opcoes li a.ativo:hover {
+           border: 1px solid #FFF !important;
+           background-color: transparent !important;
+           color: #FFF !important;
+       }
+       
+       .contraste div#menu-lateral nav#nav-menu-lateral ul#menu-opcoes li a:hover,
+       .contraste div#conteudo div#head-conteudo a.dropdown-item:hover,
+       .contraste div#conteudo div#head-conteudo a.dropdown-item:active,
+       .contraste div#conteudo div#head-conteudo a.dropdown-item:focus,
+       .contraste .dropdown-item-topo:hover,
+       .contraste .dropdown-item-topo:active,
+       .contraste .dropdown-item-topo:focus {
+           background-color: #333 !important;
+       }
+       
+       .contraste div#div-background,
+       .contraste div#div-background-rodape {
+           background: #000;
+       }
+       
+       .contraste button,
+       .contraste nav#paginacao li a,
+       .contraste div#conteudo input,
+       .contraste input[type=button],
+       .contraste input[type=text],
+       .contraste input[type=reset],
+       .contraste input[type=submit] {
+           background-color: #000 !important;
+           color: yellow !important;
+           border: 1px solid white !important;
+           font-weight: bold !important;
+       }
+       
+       .contraste nav#paginacao li.active a {
+           border: 3px solid white !important;
+       }
+       

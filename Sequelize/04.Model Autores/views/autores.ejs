@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+<!-- CONTEUDO -->
+<div class="container fade-in-1">
+    <div class="row">
+        <%- include('partials/menuLateral.ejs') %>
+        <div id="conteudo" class="col-12 col-lg-8 col-xl-9"
+            <main>
+                <a role="button" class="btn btn-success mt-3 mb-3" href="/autores/inserir">Inserir Autor</a>
+                <table class="table table-stripped">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Ações</th>
+                    </thead>
+                    <tbody>
+                        <% autores.forEach(function(autor) { %>
+                            <tr>
+                                <td><%= autor.nome %></td>
+                                <td><%= autor.sobrenome %></td>
+                                <td><a class="btn btn-primary" id="btnAlterar" href="/autores/alterar/<%= autor.id %>">Alterar</a><a class="btn btn-danger" id="btnExcluir" href="/autores/excluir/<%= autor.id %>">Excluir</a></td>
+                            </tr> 
+                        <%});%>
+                    </tbody>
+                </table>
+
+            </main>
+        </div>
+    </div>
+</div>
+<!-- FIM CONTEUDO -->
+
+<%- include('partials/footer.ejs') %>

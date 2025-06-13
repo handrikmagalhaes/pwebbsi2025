@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+<!-- CONTEUDO -->
+<<div class="container fade-in-1">
+    <div class="row">
+        <%- include('partials/menuLateral.ejs') %>
+        <div id="conteudo" class="col-12 col-lg-8 col-xl-9">
+            <main>
+                <div class="card m-3">
+                    <div class="card-header">Autor(es) de <b><%= obras.titulo %></b></div>
+                    <div class="card card-body">
+                        <form action="/autorobra/inserir" method="post" class="form form-control">
+                        <table class="table table-stripped">
+                            <thead>
+                                <th>Nome</th>
+                                <th>Ações</th>
+                            </thead>
+                            <tbody>
+                                <% obras.Autors.forEach(function(autores){ %>
+                                    <tr>
+                                        <td><%= autores.sobrenome %>, <%= autores.nome %></td>
+                                        <td><a type="button" class="btn btn-danger" href="/autorobra/excluir/<%= autores.id %>/<%= obras.id %>">Excluir</a></td>
+                                    </tr>
+
+                                <% }) %>
+                            </tbody>
+                        </table>
+                        <input type="hidden" value="<%= obras.id %>" name="obra">
+                            <label for="autores" class="form-label">Autores</label>
+                            <select class="form-control" name="autor" id="autor">
+                            <option value="" selected name="genero">---------</option>
+                            <% autores.forEach(function(autor){ %>
+                                <option value="<%= autor.id %>"><%= autor.sobrenome %>, <%= autor.nome %> </option>
+
+                            <% }) %>
+                            </select>
+                        <div class="card card-footer">
+                            <div class="btn-group col-4">
+                                <button type="submit" class="btn btn-success m-2">Incluir</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+<!-- FIM CONTEUDO -->
+<%- include('partials/footer.ejs') %>

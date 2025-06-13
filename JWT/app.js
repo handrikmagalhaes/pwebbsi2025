@@ -1,16 +1,16 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const db = require("./db");
 const path = require("path");
+require('dotenv').config()
 
 const app = express();
 const PORT = 3000;
-const SECRET_KEY = "H@ndr1ckpm";
+const SECRET_KEY = process.env.SECRET_KEY
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -29,9 +29,13 @@ function authenticateToken(req, res, next) {
 
 // Rotas
 
-app.get("/", (req, res) => res.redirect("/login"));
+app.get("/", (req, res) => {
+  console.log(SECRET_KEY)
+  res.redirect("/login")}
+);
 
 app.get("/register", (req, res) => {
+
   res.render("register");
 });
 
@@ -41,7 +45,7 @@ app.post("/register", async (req, res) => {
 
   const sql = "INSERT INTO users (username, password) VALUES (?, ?)";
   db.run(sql, [username, hashed], (err) => {
-    if (err) return res.send("Erro ao registrar usuário.");
+    if (err) return res.status(500).send("Erro ao registrar usuário.");
     res.redirect("/login");
   });
 });
@@ -54,7 +58,7 @@ app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
   db.get("SELECT * FROM users WHERE username = ?", [username], async (err, user) => {
-    if (err || !user) return res.send("Usuário não encontrado.");
+    if (err || !user) return res.status(404).send("Usuário não encontrado.");
 
     const valid = await bcrypt.compare(password, user.password);
     if (!valid) return res.send("Senha incorreta.");

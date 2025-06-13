@@ -1,0 +1,38 @@
+<%- include('partials/header.ejs') %>
+<!-- CONTEUDO -->
+<div class="container fade-in-1">
+    <div class="row">
+        <%- include('partials/menuLateral.ejs') %>
+        <div id="conteudo" class="col-12 col-lg-8 col-xl-9">
+            <main>
+                <div class="card m-3">
+                    <div class="card-header">Cadastro de Generos</div>
+                    <% if (data[0].id != 0) { %>
+                        <form action="/generos/alterar" method="post">
+                            <input type="hidden" value="<%= data[0].id %>" name="id">
+                    <% } else { %>
+                        <form action="/generos/inserir" method="post">
+                    <% } %>
+                            <div class="card card-body">
+                                <label for="genero" class="form-label">Gênero</label>
+                                <% if (data[0].id != 0) { %>
+                                    <input type="text" class="form-control" id="genero" name="genero" value="<%= data[0].genero %>">
+                                <% } else { %>
+                                    <input type="text" class="form-control" id="genero" name="genero">
+                                <% } %>
+                            </div>
+                            <div class="card card-footer">
+                                <div class="btn-group col-4">
+                                    <button type="submit" class="btn btn-success m-2">Gravar</button>
+                                    <a type="button" class="btn btn-danger m-2" href="/generos">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+<!-- FIM CONTEUDO -->
+<%- include('partials/footer.ejs') %>

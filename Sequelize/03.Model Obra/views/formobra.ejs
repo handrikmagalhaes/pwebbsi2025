@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs') %>
+<!-- CONTEUDO -->
+<<div class="container fade-in-1">
+    <div class="row">
+        <%- include('partials/menuLateral.ejs') %>
+        <div id="conteudo" class="col-12 col-lg-8 col-xl-9">
+            <main>
+                <div class="card m-3">
+                    <div class="card-header">Cadastro de Livros</div>
+                        <% dados[1].forEach(function(obra){
+                            if (obra.id == 0){ %>
+                                <form action="/obras/inserir" method="post">
+
+                            <% } else { %>
+                                <form action="/obras/alterar" method="post">
+                            <% } %>
+
+                            <div class="card card-body">
+                                <% if (obra.id != 0) { %>
+                                    <input type="hidden" id="id" name="id" value="<%= obra.id %>">
+                                <% } %>
+                                <label for="titulo" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo" <% if (obra.id != 0){ %> value="<%= obra.titulo %>" <% } %>>
+                                <label for="subtitulo" class="form-label">Sub-Título</label>
+                                <input type="text" id="subtitulo" class="form-control" name="subtitulo" <% if (obra.id != 0){ %> value="<%= obra.subtitulo %>" <% } %>>
+                                <label for="genero" class="form-label">Gênero</label>
+                                <select class="form-control" name="genero" id="genero">
+                                    <option value="" selected name="genero">---------</option>
+                                    <% dados[0].forEach(function(genero){ %>
+                                        <option value="<%= genero.id %>" <% if (genero.id == obra.GeneroId) { %> selected <% } %>><%= genero.genero %></option>
+                                    <% }) %>
+                                </select>
+                            <% }) %>
+                            </div>
+                            <div class="card card-footer">
+                                <div class="btn-group col-4">
+                                    <button type="submit" class="btn btn-success m-2">Gravar</button>
+                                    <a type="button" class="btn btn-danger m-2" href="/obras">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+<!-- FIM CONTEUDO -->
+<%- include('partials/footer.ejs') %>

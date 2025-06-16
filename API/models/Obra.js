@@ -11,10 +11,6 @@ const Obra = conn.define('Obra', {
     subtitulo: {
        type: DataTypes.STRING 
     },
-    autor: {
-        type: DataTypes.STRING,
-        allowNull: false
-    }
 })
 
 Genero.hasOne(Obra)

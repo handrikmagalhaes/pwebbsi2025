@@ -15,14 +15,10 @@ app.use(
     }),
 )
 app.use(express.json());
-app.set('view engine', 'ejs');
-
-//Arquivos estáticos
-app.use(express.static('static'))
 
 //Landing page
 app.get('/', (req,res) => {
-    res.render('index');
+    res.status(200).send({msg:"Bem-vindo à aplicação"})
 })
 
 //Pages GENEROS
@@ -31,37 +27,24 @@ app.get('/generos', (req, res) => {
         raw:true,
     })
     .then((generos) => {
-        res.render('generos', {generos})
+        res.status(200).send({generos})
     })
     .catch((err) => {
         console.error('Erro na consula', err)
-        res.status(500).send('Erro ao consultar')
+        res.status(500).send({msg:'Erro ao consultar'})
     })
 })
-app.get('/generos/inserir', (req, res) => {
-    res.render('formgenero', {data:[{id:0}]})
-})
-app.post('/generos/inserir', (req,res) => {
+app.post('/generos/', (req,res) => {
     const genero = req.body.genero
     Genero.create({genero})
     .then(() => {
-        res.redirect('/generos')
+        res.status(201).send({msg:'Recurso criado com sucesso'})
     })
     .catch((err) => {
-        res.status(500).send(err)
+        res.status(500).send({msg:err})
     })
 })
-app.get('/generos/alterar/:id', (req, res) => {
-    const id = req.params.id
-    Genero.findAll({raw:true, where:{ id: id}})
-    .then((data) => {
-        console.log(data)
-        res.render('formgenero', {data})
-    }
-
-    )
-})
-app.post('/generos/alterar', (req,res) => {
+app.put('/generos/', (req,res) => {
     const {id, genero} = req.body
     Genero.update({genero}, {
         where: {
@@ -69,13 +52,13 @@ app.post('/generos/alterar', (req,res) => {
         } 
     })
     .then(() => {
-        res.redirect('/generos')
+        res.status(200).send({msg:"Registro alterado com sucesso"})
     })
     .catch((err) => {
-        res.status(500).send(`Erro ao alterar: ${err}`)
+        res.status(500).send({msg:`Erro ao alterar: ${err}`})
     })
 })
-app.get('/generos/excluir/:id', (req, res) => {
+app.delete('/generos/:id', (req, res) => {
     const id = req.params.id
     Genero.destroy({
         where: {
@@ -83,10 +66,10 @@ app.get('/generos/excluir/:id', (req, res) => {
         }
     })
     .then(() => {
-        res.redirect('/generos')
+        res.status(200).send({msg:"Registro excluído com sucesso"})
     })
     .catch((err) => {
-        res.status(500).send(`${err}`)
+        res.status(500).send({msg:`${err}`})
     })
 })
 

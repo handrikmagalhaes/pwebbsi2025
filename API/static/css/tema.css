@@ -1,0 +1,1069 @@
+/*     ###################################
+        #           TEMA LIGHT            #
+        ###################################    */
+
+
+/*     ###################################
+       #      Configurações Iniciais     #
+       ###################################    */
+
+       .light body {
+        background-color: #f5f5f5;
+        color: #303030;
+        }
+        
+        .light p {
+        color: #999;
+    }
+    
+        .light a, .light a:hover, .light a:focus {
+        color: black;
+    }
+
+        .light div#logomarca {
+            background: url('/images/logo-light.svg') no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .light div#logomarca-rodape {
+            background: url('/images/logo-rodape-light.svg') no-repeat !important;
+            background-size: contain !important;
+        }
+    
+    
+    /*     ###################################
+           #         Menu DropDown           #
+           ###################################    */
+
+        .light .dropdown-menu {
+        border-color: #dde3e9;
+    }
+           
+        .light .dropdown-item {
+        color: #000;
+    }
+
+        .light .dropdown-item:hover,
+        .light .dropdown-item:focus,
+        .light .dropdown-item:active {
+            color: #000;
+            background-color: #E5E5E5;
+    }
+
+    /*     ###################################
+           #           BreadCrumb            #
+           ###################################    */
+    
+        .light .breadcrumb {
+        color: #495055;
+    }
+    
+        .light .breadcrumb a {
+        color: #495055;
+    }
+    
+        .light .breadcrumb a:hover {
+        color: #267D35;
+    }
+
+        .light .breadcrumb-item.active {
+        color: #495055;
+        font-weight: bold;
+    }
+    
+    
+    /*     ###################################
+           #             NavBar              #
+           ###################################    */
+
+        .light #input-busca-nav,
+        .light #input-busca-nav:hover,
+        .light #input-busca-nav:focus,
+        .light #submit-busca-nav,
+        .light #submit-busca-nav:hover,
+        .light #submit-busca-nav:focus {
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+        }
+
+        .light #busca-nav,
+        .light #busca-nav-mobile {
+            background-color: #E5E5E5;
+            color: #000;
+        }
+
+        .light #busca-nav:focus,
+        .light #busca-nav:hover,
+        .light #busca-nav-mobile:focus,
+        .light #busca-nav-mobile:hover {
+            background-color: #F0F0F0;
+        }
+
+        .light #form-nav input::placeholder,
+        .light #form-nav button,
+        .light .card-body input::placeholder {
+            color: #808080 !important;
+        }
+        
+        .light .badge-light {
+            color: #5a5a5a;
+            background-color: transparent;
+        }
+
+        .light #botao-nav2:hover .badge-light, #botao-nav2:focus .badge-light {
+            color: #000;
+        }
+
+        .light .btn-navbar-topo,
+        .light .btn-navbar-topo:focus,
+        .light .btn-card,
+        .light .btn-card:focus {
+            border-color: #E5E5E5;
+            color: #5a5a5a;
+        }
+
+        .light .btn-navbar-topo:hover,
+        .light .btn-navbar-topo:active,
+        .light .btn-card:hover,
+        .light .btn-card:active {
+            background-color: #FFF;
+            border-color: #808080;
+            color: #000;
+            box-shadow: 0px 0px 4px rgba(38, 125, 53, 0.4);
+        }
+
+        .light .navbar {
+        background: #FFF;
+        box-shadow: 0px 5px 15px rgba(31, 31, 31, 0.1) !important;
+    }     
+    
+    /*     ###################################
+           #              MENU               #
+           ###################################    */
+    
+        .light #menu {
+        background-color: #FFF;
+        color: #000;
+    }
+
+        .light #menu ul p {
+        color: #fff;
+    }
+
+        .light .secao-menu {
+        color: #535353;
+    }
+    
+        .light #menu ul li a {
+        color: #000;
+    }
+    
+        .light #menu ul li a:hover {
+        color: #000;
+        background: #E5E5E5;
+    }
+    
+    /*     ###################################
+           #       Botao Fechar Menu         #
+           ###################################    */
+    
+        .light #fecha-menu {
+        background-color: black;
+    }
+    
+    /*     ###################################
+           #       Conteúdo Principal        #
+           ###################################    */
+        
+        .light .modal-body input,
+        .light .card-body input,
+        .light .card-body select,
+        .light .card-body textarea {
+            background-color: #F0F0F0;
+            color: #000;
+            border: 1px solid #F0F0F0;
+        }
+
+        .light .modal-body input,
+        .light .card-body input,
+        .light .card-body select {
+            height: 50px;
+        }
+
+        .light .modal-body input:hover,
+        .light .card-body input:hover,
+        .light .card-body select:hover,
+        .light .card-body textarea:hover,
+        .light .modal-body input:focus,
+        .light .card-body input:focus,
+        .light .card-body select:focus,
+        .light .card-body textarea:focus {
+            background-color: #FFF;
+            border: 1px solid #D0D0D0;
+            box-shadow: 0px 0px 6px rgba(26, 85, 36, 0.3);
+        }
+
+        .light hr {
+        color: #DADADA;
+        }
+
+        .light .btn-tema-light,
+        .light .btn-acao-cancelar,
+        .light .btn-acao {
+        border: 1px solid rgba(0,0,0,.1);
+        color: #555;
+        background-color: transparent;
+    }
+    
+        .light .btn-tema-light:hover{
+        color: #333;
+        background-color: #fff;
+    }
+   
+        .light .btn-acao:hover{
+        color: #FFF;
+        background-color: #666;
+    }
+
+        .light .btn-acao-cancelar:hover{
+        color: #FFF;
+        background-color: rgb(255, 0, 0);
+    }
+
+        .light .btn-tema-light:focus {
+        color: #267D35;
+        background-color: white;
+        border-color: #267D35;
+        box-shadow: 0px 0px 4px rgba(38, 125, 53, 0.4);
+    }
+    
+        .light .rodape {
+        color: #495055;
+    }
+
+    /*     #####################################
+           #             Modal                 #
+           #####################################    */    
+    
+        .light .modal-content {
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+            border-radius: 7px !important;
+            box-shadow: 0px 5px 15px rgba(31, 31, 31, 0.1) !important;
+        }
+
+        .light .modal-header,
+        .light .modal-body {
+            background-color: white !important;
+        }
+
+        .light .modal-footer {
+            background-color: #F0F0F0 !important;
+            border-radius: 0px 0px 7px 7px !important;
+        }
+
+   
+    /*     #####################################
+           #             Paginacao             #
+           #####################################    */
+    
+        .light #td_pagination {
+        background-color: white !important;
+    }
+
+        .light .page-link {
+            color: #000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+            background-color: #FFF;
+            border-color: #D0D0D0;
+    }
+
+        .light .page-link:hover {
+            color: black !important;
+            background-color: #F0F0F0;
+            border-color: #C0C0C0;
+    }
+
+        .light .page-item.active .page-link,
+        .light .page-item.active .page-link:hover {
+            color: #FFF !important;
+            background-color: #2F9E41 !important;
+            border-color: #2F9E41 !important;
+    }
+          
+    /*     #####################################
+           # Divs título da pg e botão lateral #
+           #####################################    */
+           
+        .light .background-andamento {
+        background-image: linear-gradient(to right, #37B24B, #6DDE7F)
+    }
+    
+        .light .color-andamento {
+        color: #FFF;
+    }
+    
+        .light .color-suspenso {
+        color: #B2A637;
+    }
+    
+        .light .color-encerrado {
+        color: #DB5858;
+    }
+    
+        .light .color-total {
+        color: #797979;
+    }
+        
+        .light .btn-adicionar,
+        .light .card-andamento {
+        box-shadow: 0px 0px 15px rgba(7, 205, 40, 0.4);
+    }
+    
+        .light .card,
+        .light .modal-content {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    }
+          
+        .light .card-header {
+        background-color: #FFF;
+    }
+    
+/*      ###################################
+        #         FIM TEMA LIGHT          #
+        ###################################    */
+
+
+/*     ###################################
+        #           TEMA VERDE            #
+        ###################################    */
+
+
+/*     ###################################
+       #      Configurações Iniciais     #
+       ###################################    */
+
+       .verde body {
+        background-color: #ECEFF4;
+        color: #303030;
+        }
+        
+        .verde p {
+        color: #999;
+    }
+    
+        .verde a, .verde a:hover, .verde a:focus {
+        color: black;
+    }
+
+        .verde div#logomarca {
+            background: url('/images/logo-verde.svg') no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .verde div#logomarca-rodape {
+            background: url('/images/logo-rodape-verde.svg') no-repeat !important;
+            background-size: contain !important;
+        }
+    
+    
+    /*     ###################################
+           #         Menu DropDown           #
+           ###################################    */
+          
+        .verde .dropdown-item {
+        color: #000;
+    }
+
+        .verde .dropdown-item:hover,
+        .verde .dropdown-item:focus,
+        .verde .dropdown-item:active {
+            color: #000;
+            background-color: #E5E5E5;
+    }
+    
+    /*     ###################################
+           #           BreadCrumb            #
+           ###################################    */
+    
+        .verde .breadcrumb {
+            color: #495055;
+         }
+         
+        .verde .breadcrumb a {
+            color: #495055;
+         }
+         
+        .verde .breadcrumb a:hover {
+            color: #267D35;
+         }
+     
+        .verde .breadcrumb-item.active {
+            color: #495055;
+            font-weight: bold;
+         }
+    
+    
+    /*     ###################################
+           #             NavBar              #
+           ###################################    */
+    
+        .verde #input-busca-nav,
+        .verde #input-busca-nav:hover,
+        .verde #input-busca-nav:focus,
+        .verde #submit-busca-nav,
+        .verde #submit-busca-nav:hover,
+        .verde #submit-busca-nav:focus {
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+        }
+
+        .verde #busca-nav,
+        .verde #busca-nav-mobile {
+            background-color: #87DC95;
+            color: #000;
+        }
+    
+        .verde #busca-nav:focus,
+        .verde #busca-nav:hover,
+        .verde #busca-nav-mobile:focus,
+        .verde #busca-nav-mobile:hover {
+            background-color: #FFF;
+        }
+
+        .verde .card-body input::placeholder,
+        .verde .modal-body input::placeholder {
+            color: #808080 !important;
+        }
+
+        .verde #form-nav button,
+        .verde #form-nav input::placeholder {
+            color: #288d39 !important;
+        }
+
+        .verde .card-body input:focus::placeholder,
+        .verde .modal-body input:focus::placeholder {
+            color: #D0D0D0 !important;
+        }
+        
+        .verde .badge-light {
+            color: #FFF;
+            background-color: transparent;
+        }
+
+        .verde #botao-nav2:hover .badge-light, #botao-nav2:focus .badge-light {
+            color: #000;
+        }
+
+        .verde .btn-navbar-topo,
+        .verde .btn-navbar-topo:focus {
+            border-color: #87DC95;
+            color: #FFF;
+        }
+
+        .verde .btn-card,
+        .verde .btn-card:focus {
+            border-color: #E5E5E5;
+            color: #5a5a5a;
+        }
+
+        .verde .btn-navbar-topo:hover,
+        .verde .btn-navbar-topo:active,
+        .verde .btn-card:hover,
+        .verde .btn-card:active {
+            background-color: #FFF;
+            color: #000;
+            box-shadow: 0px 0px 4px rgba(26, 85, 36, 0.3);
+        }
+           
+        .verde .navbar {
+        background: #37B24B;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }     
+    
+    /*     ###################################
+           #              MENU               #
+           ###################################    */
+    
+        .verde #menu {
+        background-color: #FFF;
+        color: #000;
+    }
+
+        .verde #menu ul p {
+        color: #fff;
+    }
+
+        .verde .secao-menu {
+        color: #535353;
+    }
+    
+        .verde #menu ul li a {
+        color: #000;
+    }
+    
+        .verde #menu ul li a:hover {
+        color: #000;
+        background: #E0E0E0;
+    }
+
+    /*     ###################################
+           #        Botao Fechar Menu        #
+           ###################################    */
+          
+        .verde #btnMenu:focus{
+        background-color: white;
+        color: black;
+    }
+    
+        .verde #fecha-menu {
+        background-color: black;
+    }
+    
+    /*     ###################################
+           #       Conteúdo Principal        #
+           ###################################    */
+           
+    .verde .modal-body input,
+    .verde .card-body input,
+    .verde .card-body select,
+    .verde .card-body textarea {
+        background-color: #F0F0F0;
+        color: #000;
+        border: 1px solid #F0F0F0;
+    }
+
+    .verde .modal-body input,
+    .verde .card-body input,
+    .verde .card-body select {
+        height: 50px;
+    }
+
+    .verde .modal-body input:hover,
+    .verde .card-body input:hover,
+    .verde .card-body select:hover,
+    .verde .card-body textarea:hover,
+    .verde .modal-body input:focus,
+    .verde .card-body input:focus,
+    .verde .card-body select:focus,
+    .verde .card-body textarea:focus {
+        background-color: #FFF;
+        border: 1px solid #D0D0D0;
+        box-shadow: 0px 0px 6px rgba(26, 85, 36, 0.3);
+    }
+
+        .verde hr {
+        color: #DADADA;
+    }
+    
+        .verde .btn-tema-light,
+        .verde .btn-acao,
+        .verde .btn-acao-cancelar {
+        border: 1px solid rgba(0,0,0,.1);
+        color: #555;
+        background-color: transparent;
+    }
+    
+        .verde .btn-tema-light:hover{
+        color: #333;
+        border-color: #c9cdd3;
+        background-color: #e0e3e9;
+    }
+
+        .verde .btn-acao:hover{
+        color: #FFF;
+        background-color: #666;
+    }
+
+        .verde .btn-acao-cancelar:hover{
+        color: #FFF;
+        background-color: rgb(255, 0, 0);
+    }
+
+        .verde .btn-tema-light:focus {
+        color: #267D35;
+        background-color: white;
+        border-color: #267D35;
+        box-shadow: 0px 0px 4px rgba(38, 125, 53, 0.4);
+ }
+    
+        .verde .rodape {
+        color: #495055;
+    }
+
+    /*     #####################################
+           #             Modal                 #
+           #####################################    */    
+    
+           .verde .modal-content {
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+            border-radius: 7px !important;
+            box-shadow: 0px 5px 15px rgba(31, 31, 31, 0.1) !important;
+        }
+
+            .verde .modal-header,
+            .verde .modal-body {
+            background-color: white !important;
+        }
+
+            .verde .modal-footer {
+            background-color: #F0F0F0 !important;
+            border-radius: 0px 0px 7px 7px !important;
+        }
+
+    
+    /*     ###################################
+           #    Cores na tabela (Striped)    #
+           ###################################    */
+    
+            .verde .table-striped>tbody>tr:nth-child(odd)>td,
+            .verde .table-striped>tbody>tr:nth-child(odd)>th {
+                background-color: #F0F0F0;
+        }
+
+
+    /*     #####################################
+           #             Paginação             #
+           #####################################    */
+    
+        .verde #td_pagination {
+        background-color: white !important;
+    }
+
+        .verde .page-link {
+            color: #000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+            background-color: #FFF;
+            border-color: #D0D0D0;
+    }
+
+        .verde .page-link:hover {
+            color: black !important;
+            background-color: #F0F0F0;
+            border-color: #c9cdd3;
+    }
+
+        .verde .page-item.active .page-link,
+        .verde .page-item.active .page-link:hover {
+            color: #FFF !important;
+            background-color: #2F9E41 !important;
+            border-color: #2F9E41 !important;
+    }
+          
+    /*     #####################################
+           # Divs título da pg e botão lateral #
+           #####################################    */
+           
+        .verde .background-andamento {
+        background-image: linear-gradient(to right, #37B24B, #6DDE7F)
+    }
+    
+        .verde .color-andamento {
+        color: #FFF;
+    }
+    
+        .verde .color-suspenso {
+        color: #B2A637;
+    }
+    
+        .verde .color-encerrado {
+        color: #DB5858;
+    }
+    
+        .verde .color-total {
+        color: #797979;
+    }
+    
+        .verde .btn-adicionar,
+        .verde .card-andamento {
+        box-shadow: 0px 0px 15px rgba(7, 205, 40, 0.4);
+    }
+    
+        .verde .card {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    }
+          
+        .verde .card-header {
+        background-color: #FFF;
+    }
+    
+/*      ###################################
+        #           FIM TEMA VERDE        #
+        ###################################    */
+
+
+/*      ###################################
+        #           TEMA ESCURO           #
+        ###################################    */
+
+/*     ###################################
+       #      Configurações Iniciais     #
+       ###################################    */
+
+       .escuro body {
+        background-color: #121525;
+        color: #FFF;
+        }
+        
+        .escuro p {
+        color: #fff;
+        }
+    
+        .escuro a, .escuro a:hover, .escuro a:focus {
+        color: #a4aed6;
+        }
+
+        .escuro div#logomarca {
+            background: url('/images/logo-escuro.svg') no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .escuro div#logomarca-rodape {
+            background: url('/images/logo-rodape-escuro.svg') no-repeat !important;
+            background-size: contain !important;
+        }
+    
+    /*     ###################################
+           #         Menu DropDown           #
+           ###################################    */
+
+        .escuro .dropdown-menu {
+        border-color: #37426E;
+        background-color: #20273F;
+    }
+
+        .escuro .dropdown-divider {
+        border-color: #37426E;
+    }
+
+        .escuro .dropdown-item {
+            color: #FFF;
+        }
+
+        .escuro .dropdown-item:hover,
+        .escuro .dropdown-item:focus,
+        .escuro .dropdown-item:active {
+            color: #FFF;
+            background-color: #37426E;
+    }
+           
+    
+    /*     ###################################
+           #           BreadCrumb            #
+           ###################################    */
+    
+        .escuro .breadcrumb {
+        color: #a4aed6;
+    }
+
+        .escuro .breadcrumb-item.active {
+        color: #a4aed6;
+    }
+    
+        .escuro .breadcrumb a {
+        color: #a4aed6;
+    }
+    
+        .escuro .breadcrumb a:hover {
+        color: #87DC95;
+    }
+    
+    
+    /*     ###################################
+           #             NavBar              #
+           ###################################    */
+
+        .escuro #input-busca-nav,
+        .escuro #input-busca-nav:hover,
+        .escuro #input-busca-nav:focus,
+        .escuro #submit-busca-nav,
+        .escuro #submit-busca-nav:hover,
+        .escuro #submit-busca-nav:focus {
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+        }
+    
+        .escuro #busca-nav {
+            background-color: #37426E !important;
+            color: #FFF !important;
+        }
+
+        .escuro #busca-nav-mobile,
+        .escuro .modal-body input,
+        .escuro .card-body input,
+        .escuro .card-body input[type=file],
+        .escuro .card-body select,
+        .escuro .card-body textarea {
+            background-color: #37426E !important;
+            color: #FFF !important;
+            border: 1px solid #37426E !important;
+        }
+
+        .escuro .modal-body input,
+        .escuro .card-body select,
+        .escuro .card-body input {
+            height: 50px;
+        }
+
+        .escuro #busca-nav input,
+        .escuro #busca-nav-mobile input {
+            color: #fff;
+        }
+
+        .escuro #busca-nav button,
+        .escuro #busca-nav input::placeholder,
+        .escuro #busca-nav-mobile input::placeholder,
+        .escuro .modal-body input::placeholder,
+        .escuro .card-body input::placeholder {
+            color: #6d7aaf;
+        }
+  
+        .escuro #busca-nav:focus,
+        .escuro #busca-nav:hover,
+        .escuro #busca-nav-mobile:focus,
+        .escuro #busca-nav-mobile:hover,
+        .escuro .modal-body input:focus,
+        .escuro .modal-body input:hover,
+        .escuro .card-body input:focus,
+        .escuro .card-body input:hover,
+        .escuro .card-body select:focus,
+        .escuro .card-body select:hover,
+        .escuro .card-body textarea:focus,
+        .escuro .card-body textarea:hover {
+            background-color: #465386 !important;
+        }
+
+        .escuro .badge-light {
+            color: #FFF;
+            background-color: transparent;
+        }
+
+        .escuro .close,
+        .escuro #botao-nav2:hover .badge-light,
+        .escuro #botao-nav2:focus .badge-light {
+            color: #FFF !important;
+        }
+
+        .escuro .btn-navbar-topo,
+        .escuro .btn-navbar-topo:focus,
+        .escuro .btn-card,
+        .escuro .btn-card:focus {
+            border-color: #37426E !important;
+            color: #FFF;
+        }
+
+        .escuro .btn-navbar-topo:hover,
+        .escuro .btn-navbar-topo:active,
+        .escuro .btn-card:hover,
+        .escuro .btn-card:active {
+            background-color: #37426E !important;
+            color: #FFF;
+            box-shadow: 0px 0px 4px rgba(26, 85, 36, 0.3);
+        }
+
+        .escuro .navbar {
+        background: #20273F;
+        box-shadow: 0px 5px 15px rgba(31, 31, 31, 0.7) !important;
+    }     
+    
+    /*     ###################################
+           #              MENU               #
+           ###################################    */
+    
+        .escuro #menu {
+        background-color: #20273F;
+        color: #000;
+    }
+
+        .escuro #menu ul p {
+        color: #fff;
+    }
+
+        .escuro .secao-menu {
+        color: #a4aed6;
+    }
+    
+        .escuro #menu ul li a {
+        color: #fff;
+    }
+    
+        .escuro #menu ul li a:hover {
+        color: #fff;
+        background: #37426E;
+    }
+       
+    /*     ###################################
+           #        Botao Fechar Menu        #
+           ###################################    */
+
+        .escuro #btnMenu {
+        border-color: #37426E;
+        color: #FFF;
+    }
+
+        .escuro #btnMenu:hover{
+        background-color: #37426E;
+        color: #FFF;
+    }
+
+        .escuro #btnMenu:focus{
+        background-color: #37426E;
+        color: #FFF;
+    }
+    
+        .escuro #fecha-menu {
+        background-color: black;
+    }
+    
+    /*     ###################################
+           #       Conteúdo Principal        #
+           ###################################    */
+           
+        .escuro hr {
+        border-top: 1px dashed #37426E;
+    }
+    
+        .escuro .btn-tema-light,
+        .escuro .btn-acao-cancelar,
+        .escuro .btn-acao {
+        border-color: #37426E;
+        color: #FFF;
+        background-color: transparent;
+    }
+    
+        .escuro .btn-tema-light:hover,
+        .escuro .btn-acao:hover{
+        color: #FFF;
+        border-color: #37426E;
+        background-color: #37426E;
+    }
+
+        .escuro .btn-acao-cancelar:hover{
+        color: #FFF;
+        background-color: rgb(255, 0, 0);
+        border-color: rgb(199, 0, 0);
+        box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+    }
+
+        .escuro .btn-tema-light:focus {
+        color: #FFF;
+        background-color: #3c4775;
+        border-color: #3c4775;
+        box-shadow: 0px 0px 10px rgba(75, 88, 139, 0.8);
+    }
+    
+        .escuro .rodape {
+        color: #FFF;
+    }
+    
+    /*     ###################################
+           #    Cores na tabela (Striped)    #
+           ###################################    */
+    
+        .escuro .table-striped>tbody>tr:nth-child(odd)>td,
+        .escuro .table-striped>tbody>tr:nth-child(odd)>th {
+        background-color: #2A3354;
+     }
+   
+    /*     #####################################
+           #             Paginação             #
+           #####################################    */
+    
+        .escuro #td_pagination {
+        background-color: white !important;
+    }
+
+        .escuro .page-link {
+            color: #FFF;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+            background-color: transparent;
+            border-color: #3c4775;
+    }
+
+        .escuro .page-link:hover {
+            color: #FFF !important;
+            background-color: #3c4775;
+    }
+
+        .escuro .page-item.disabled .page-link {
+            color: #3c4775;
+            background-color: transparent;
+            border-color: #3c4775;
+    }
+
+        .escuro .page-item.active .page-link {
+            color: #FFF;
+            background-color: #2F9E41 !important;
+            border-color: #2F9E41 !important;
+            box-shadow: 0px 0px 10px rgba(7, 205, 40, 0.8);
+    }
+          
+    /*     #####################################
+           # Divs título da pg e botão lateral #
+           #####################################    */
+           
+        .escuro .background-andamento {
+        background-image: linear-gradient(to right, #37B24B, #6DDE7F)
+    }
+    
+        .escuro .color-andamento {
+        color: #FFF;
+    }
+    
+        .escuro .color-suspenso {
+        color: #B2A637;
+    }
+    
+        .escuro .color-encerrado {
+        color: #DB5858;
+    }
+    
+        .escuro .color-total {
+        color: #37426E;
+    }
+    
+        .escuro .btn-adicionar,
+        .escuro .card-andamento {
+        box-shadow: 0px 0px 20px rgba(7, 205, 40, 0.8);
+    }
+    
+        .escuro .card,
+        .escuro .modal-content {
+        background-color: #20273F;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    }
+          
+        .escuro .card-header,
+        .escuro .modal-header {
+            border-bottom: 1px solid #37426E;
+    }
+
+        .escuro .card-footer,
+        .escuro .modal-footer {
+            border-top: 1px solid #37426E;
+    }
+
+    /*     ###################################
+           #         FIM TEMA ESCURO         #
+           ###################################    */
+
+    /*     ###################################
+           #     Outros ajustes de cores     #
+           ###################################    */
+
+        .tema-light {
+            color: #C0C0C0 !important;
+        }
+
+        .tema-verde {
+            color: #267D35 !important;
+        }
+
+        .tema-escuro {
+            color: #20273F !important;
+        }
+
+        .escuro .tema-escuro {
+            color: #121525 !important;
+        }

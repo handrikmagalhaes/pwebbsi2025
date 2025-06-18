@@ -83,18 +83,13 @@
         <div id="conteudo" class="col-12 col-lg-8 col-xl-9">
             <main>
                 <a role="button" class="btn btn-success mt-3 mb-3" href="/generos/inserir">Inserir Gênero</a>
-                <table class="table table-stripped" hidden>
+                <table class="table table-stripped" id="tabela" hidden>
                     <thead>
                         <th>#</th>
                         <th>Gênero</th>
                         <th>Ações</th>
                     </thead>
-                    <tbody>
-                            <tr>
-                                <td><%= genero.id %></td>
-                                <td><%= genero.genero %></td>
-                                <td><a class="btn btn-primary" href="/generos/alterar/<%= genero.id %>">Alterar</a><a class="btn btn-danger" href="/generos/excluir/<%= genero.id %>">Excluir</a></td>
-                            </tr> 
+                    <tbody id="corpo">
                     </tbody>
                 </table>
 
@@ -136,14 +131,29 @@
 <script src="./static/js/contraste.js" crossorigin="anonymous"></script>
 <script>
     window.onload = async function(){
-        const response = await fetch("http://localhost:3000/generos")
+        const response = await fetch('http://localhost:3000/generos')
 
-        if(!response.ok) {
-            throw new Error(`Status da Resposta: ${response.status}`)
+        if (!response.ok) {
+            throw new Error(`Resposta: ${response.status}`)
         }
 
         const json = await response.json()
-        console.log(json)
+        const corpo = document.getElementById("corpo")
+        json.generos.forEach(function(genero){
+            let linha = document.createElement("tr")
+            let id = document.createElement("td")
+            let gen = document.createElement("td")
+            let botoes = document.createElement("td")
+            botoes.innerHTML = '<a class="btn btn-primary" href="formularioGenero.html?id=genero.id">Alterar</a><a class="btn btn-danger" href="/generos/excluir/<%= genero.id %>">Excluir</a>'
+            id.textContent = genero.id
+            gen.textContent = genero.genero
+            linha.appendChild(id)
+            linha.appendChild(gen)
+            linha.appendChild(botoes)
+            corpo.appendChild(linha)
+        })
+        document.getElementById("tabela").hidden = false;
+        
     }
 </script>
 </body>

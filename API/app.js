@@ -1,5 +1,4 @@
 const express = require('express')
-const cors = require('cors')
 const conn = require('./models/conn')
 
 //Models
@@ -14,10 +13,7 @@ app.use(
     express.urlencoded({
         extended: true,
     }),
-    cors({
-        origin: 'http://localhost'
-    }),
-    express.json()
+    express.json(),
 )
 
 //Landing page

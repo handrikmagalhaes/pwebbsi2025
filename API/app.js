@@ -16,9 +16,9 @@ app.use(
     }),
     cors({
         origin: 'http://localhost'
-    })
+    }),
+    express.json()
 )
-app.use(express.json());
 
 //Landing page
 app.get('/', (req,res) => {
